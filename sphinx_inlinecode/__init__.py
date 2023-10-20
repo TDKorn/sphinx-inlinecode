@@ -1,3 +1,5 @@
+import re
+import bs4
 import sphinx
 from pathlib import Path
 from bs4 import BeautifulSoup
@@ -43,6 +45,9 @@ def get_code_blocks(root_dir: Path) -> Dict[Path, List[Dict]]:
                 "ref_id": qualname,
                 "code": block
             })
+
+            # Remove internal link to documentation entry
+            backlink.replace_with()
 
     return mapping
 
