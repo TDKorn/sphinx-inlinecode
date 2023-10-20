@@ -67,3 +67,26 @@ def get_source_code_files(root: Path) -> List[Path]:
             files.extend(get_source_code_files(entry))
 
     return files
+def adjust_indentation(code_block: bs4.element.Tag) -> bs4.element.Tag:
+    """Adjusts indentation of the code block by removing common leading whitespace.
+
+    :param code_block: HTML code block whose indentation needs adjustment.
+    :return: code block with adjusted indentation.
+    """
+    contents = code_block.contents
+
+    if not isinstance(contents[0], bs4.element.NavigableString):
+        return code_block  # Block has no indentation
+
+    initial_indent = len(contents[0])
+    pattern = fr"[ ]{{{initial_indent}}}(.*)"
+
+    for child in contents:
+        if isinstance(child, bs4.NavigableString):
+            replacement = re.sub(pattern, r"\1", child)
+            child.replace_with(replacement)
+        else:
+            replacement = re.sub(pattern, r"\1", child.string)
+            child.string = replacement
+
+    return code_block
