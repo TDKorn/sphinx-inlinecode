@@ -16,11 +16,15 @@ def setup(app: Sphinx) -> Dict[str, Any]:
 
 
 def add_source_code(app, exception):
-    root_dir = Path(f"{app.outdir}/_modules").resolve()
+    """Insert source code blocks into documentation entries."""
+    root_dir = Path(app.outdir).joinpath("_modules").absolute()
     if not root_dir.exists():
         return
 
-    block_map = get_code_blocks(root_dir)
+    code_blocks = get_code_blocks(root_dir)
+    for doc_file, block_data in code_blocks.items():
+        result = insert_source_code(doc_file, block_data)
+        doc_file.write_text(str(result), encoding='utf-8')
 
 
 def get_code_blocks(root_dir: Path) -> Dict[Path, List[Dict]]:
