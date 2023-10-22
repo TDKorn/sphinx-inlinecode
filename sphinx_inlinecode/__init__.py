@@ -9,10 +9,20 @@ from sphinx.application import Sphinx
 
 
 def setup(app: Sphinx) -> Dict[str, Any]:
-    app.setup_extension('sphinx.ext.viewcode')
+    app.connect("builder-inited", add_static_path)
     app.connect('build-finished', add_source_code)
 
+    app.setup_extension('sphinx.ext.viewcode')
+    app.add_css_file("sphinx-inlinecode.css")
+
     return {'version': sphinx.__display_version__, 'parallel_read_safe': True}
+
+
+def add_static_path(app) -> None:
+    """Add the path for the ``_static`` folder"""
+    app.config.html_static_path.append(
+        str(Path(__file__).parent.joinpath("_static").absolute())
+    )
 
 
 def add_source_code(app, exception):

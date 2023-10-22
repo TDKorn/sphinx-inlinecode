@@ -1,0 +1,18 @@
+.sphinx-inlinecode div.highlight,
+.sphinx-inlinecode summary {
+    margin: 4px 0 1px;
+}
+
+.sphinx-inlinecode div.highlight {
+    font-weight: 400;
+}
+
+.sphinx-inlinecode summary {
+    color: #00ee;
+    font-size: 80%;
+    cursor: pointer;
+}
+
+.sphinx-inlinecode .viewcode-block span.k {
+    font-style: normal !important;
+}
