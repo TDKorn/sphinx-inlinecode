@@ -67,6 +67,28 @@ def get_source_code_files(root: Path) -> List[Path]:
             files.extend(get_source_code_files(entry))
 
     return files
+
+
+def wrap_code_block(code_block: bs4.element.Tag) -> BeautifulSoup:
+    """Wraps the given code block inside a <details> HTML element.
+
+    :param code_block: HTML of the code block to wrap.
+    :return: the wrapped code block.
+    """
+    formatted_block = adjust_indentation(code_block)
+    html = """
+    <details class="sphinx-inlinecode">
+        <summary>
+            <span class="pre">View Source Code</span>
+        </summary>
+        <div class="highlight">
+            <pre>{adjusted_code_block}</pre>
+        </div>
+    </details>
+    """.format(adjusted_code_block=formatted_block)
+    return BeautifulSoup(html, 'html.parser')
+
+
 def adjust_indentation(code_block: bs4.element.Tag) -> bs4.element.Tag:
     """Adjusts indentation of the code block by removing common leading whitespace.
 
