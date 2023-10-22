@@ -69,6 +69,30 @@ def get_source_code_files(root: Path) -> List[Path]:
     return files
 
 
+def insert_source_code(file: Path, block_data: List[Dict]) -> BeautifulSoup:
+    """Inserts source code blocks into the specified documentation HTML file.
+
+    :param file: path to the HTML file.
+    :param block_data: list of dictionaries containing code block data.
+    :return: HTML content of the file, with all code blocks inserted
+    """
+    soup = BeautifulSoup(file.read_text(encoding='utf-8'), 'html.parser')
+
+    for block in block_data:
+        # Find the corresponding documentation entry
+        doc_entry = soup.find("dt", id=block["ref_id"])
+
+        # Insert formatted source code block after object signature.
+        code_block = wrap_code_block(block['code'])
+        doc_entry.append(code_block)
+
+        # Remove viewcode link
+        viewcode_link = doc_entry.find("span", "viewcode-link")
+        viewcode_link.parent.replace_with()
+
+    return soup
+
+
 def wrap_code_block(code_block: bs4.element.Tag) -> BeautifulSoup:
     """Wraps the given code block inside a <details> HTML element.
 
