@@ -183,8 +183,8 @@ def skip(app, what, name, obj, would_skip, options):
 
 
 def rename_index(app, exception):
-    readme = Path(f"{root}/README.rst")
-    index = Path(f"{root}/index.rst")
+    readme = Path(f"{root}/README.rst").resolve()
+    index = Path(f"{root}/index.rst").resolve()
 
     if index.exists():
         readme.write_text(index.read_text(encoding="utf-8"), encoding="utf-8")
