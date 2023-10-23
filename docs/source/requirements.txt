@@ -1,0 +1,4 @@
+sphinx-github-style
+sphinx-inlinecode
+sphinx-sitemap
+sphinx-readme
