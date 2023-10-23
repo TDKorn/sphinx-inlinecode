@@ -8,7 +8,7 @@ from collections import defaultdict
 from sphinx.application import Sphinx
 
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __author__ = 'Adam Korn <hello@dailykitten.net>'
 
 
