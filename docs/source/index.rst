@@ -22,8 +22,9 @@ sphinx-inlinecode
     :target: https://sphinx-inlinecode.readthedocs.io/en/latest/?badge=latest
     :alt: sphinx-inlinecode Documentation Status
 
-|
+.. only:: readme
 
+   |
 
 ``sphinx-inlinecode`` is a Sphinx extension that embeds source code blocks directly into your documentation as a dropdown.
 
@@ -56,11 +57,13 @@ Add the extension to your ``conf.py``
 
 
 
-Documentation
-~~~~~~~~~~~~~~~
+.. only:: readme
 
-Full documentation can be found on |RTD|_
+   Documentation
+   ~~~~~~~~~~~~~~~
+
+   Full documentation can be found on |RTD|_
 
 
-.. |RTD| replace:: ReadTheDocs
-.. _RTD: https://sphinx-github-style.readthedocs.io/en/latest/
+   .. |RTD| replace:: ReadTheDocs
+   .. _RTD: https://sphinx-inlinecode.readthedocs.io/en/latest/

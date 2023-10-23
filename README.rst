@@ -26,7 +26,6 @@ sphinx-inlinecode
 
 |
 
-
 ``sphinx-inlinecode`` is a Sphinx extension that embeds source code blocks directly into your documentation as a dropdown.
 
 
@@ -65,4 +64,4 @@ Full documentation can be found on |RTD|_
 
 
 .. |RTD| replace:: ReadTheDocs
-.. _RTD: https://sphinx-github-style.readthedocs.io/en/latest/
+.. _RTD: https://sphinx-inlinecode.readthedocs.io/en/latest/

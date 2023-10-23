@@ -111,7 +111,7 @@ def insert_source_code(file: Path, block_data: List[Dict]) -> BeautifulSoup:
     return soup
 
 
-def wrap_code_block(code_block: bs4.element.Tag) -> BeautifulSoup:
+def wrap_code_block(code_block: bs4.Tag) -> BeautifulSoup:
     """Wraps the given code block inside a <details> HTML element.
 
     :param code_block: HTML of the code block to wrap.
@@ -131,7 +131,7 @@ def wrap_code_block(code_block: bs4.element.Tag) -> BeautifulSoup:
     return BeautifulSoup(html, 'html.parser')
 
 
-def adjust_indentation(code_block: bs4.element.Tag) -> bs4.element.Tag:
+def adjust_indentation(code_block: bs4.Tag) -> bs4.element.Tag:
     """Adjusts indentation of the code block by removing common leading whitespace.
 
     :param code_block: HTML code block whose indentation needs adjustment.
