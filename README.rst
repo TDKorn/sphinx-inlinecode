@@ -1,3 +1,5 @@
+
+
 .. meta::
    :author: Adam Korn
    :title: sphinx-inlinecode - embed source code blocks directly into Sphinx documentation
@@ -10,9 +12,9 @@ sphinx-inlinecode
 ``sphinx-inlinecode`` is a Sphinx extension that embeds source code blocks directly into your documentation as a dropdown.
 
 
-.. rubric:: Example
+**Example**
 
-.. image:: /_static/example.png
+.. image:: https://raw.githubusercontent.com/TDKorn/sphinx-inlinecode/main/docs/source/_static/example.png
    :alt: embedded code block added by sphinx-inlinecode
 
 |

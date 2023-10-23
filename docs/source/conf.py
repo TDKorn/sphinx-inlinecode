@@ -14,6 +14,7 @@
 import os
 import sys
 import pkg_resources
+from pathlib import Path
 
 
 # ============================== Build Environment ==============================
@@ -117,7 +118,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.autosectionlabel',
     'sphinx.ext.viewcode',
-    # 'sphinx_readme',
+    'sphinx_readme',
     'sphinx_sitemap',
     'sphinx_github_style',
     'sphinx_inlinecode'
@@ -152,13 +153,20 @@ autodoc_typehints_description_target = 'documented_params'
 # Shorten type hints
 python_use_unqualified_type_names = True
 
-
 # ~~~~ Sphinx GitHub Style ~~~~
 #
 top_level = "sphinx_inlinecode"
 
 # Text to use for the linkcode link
 linkcode_link_text = "View on GitHub"
+
+readme_blob = linkcode_blob = "main"
+
+# ~~~~~ Sphinx README ~~~~~~~
+
+readme_src_files = "index.rst"
+
+readme_docs_url_type = "html"
 
 
 def skip(app, what, name, obj, would_skip, options):
@@ -174,6 +182,16 @@ def skip(app, what, name, obj, would_skip, options):
     return would_skip
 
 
+def rename_index(app, exception):
+    readme = Path(f"{root}/README.rst")
+    index = Path(f"{root}/index.rst")
+
+    if index.exists():
+        readme.write_text(index.read_text(encoding="utf-8"), encoding="utf-8")
+        index.unlink()
+
+
 def setup(app):
     app.connect('autodoc-skip-member', skip)
+    app.connect('build-finished', rename_index, priority=10000)
     app.add_css_file("custom.css")
