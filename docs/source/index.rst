@@ -31,8 +31,18 @@ sphinx-inlinecode
 
 .. rubric:: Example
 
-.. image:: /_static/example.png
-   :alt: embedded code block added by sphinx-inlinecode
+
+.. only:: readme or pypi
+
+   .. image:: /_static/example.png
+      :alt: embedded code block added by sphinx-inlinecode
+
+
+.. only:: html
+
+   .. autofunction:: sphinx_inlinecode.adjust_indentation
+      :noindex:
+
 
 |
 
