@@ -32,7 +32,7 @@ sphinx-inlinecode
 .. rubric:: Example
 
 
-.. only:: readme or pypi
+.. only:: not html
 
    .. image:: /_static/example.png
       :alt: embedded code block added by sphinx-inlinecode

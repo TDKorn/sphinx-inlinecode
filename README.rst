@@ -31,8 +31,13 @@ sphinx-inlinecode
 
 **Example**
 
+
 .. image:: https://raw.githubusercontent.com/TDKorn/sphinx-inlinecode/main/docs/source/_static/example.png
    :alt: embedded code block added by sphinx-inlinecode
+
+
+
+
 
 |
 

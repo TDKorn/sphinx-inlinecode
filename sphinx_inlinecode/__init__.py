@@ -6,7 +6,7 @@ from sphinx.application import Sphinx
 from bs4 import BeautifulSoup, Tag, NavigableString
 
 
-__version__ = "1.0.1"
+__version__ = "1.1.0"
 __author__ = 'Adam Korn <hello@dailykitten.net>'
 
 

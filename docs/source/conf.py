@@ -38,11 +38,11 @@ project = 'sphinx-inlinecode'
 repo = project
 
 # Package Info
-# pkg = pkg_resources.require(project)[0]
-# pkg_name = pkg.get_metadata('top_level.txt').strip()
+pkg = pkg_resources.require(project)[0]
+pkg_name = pkg.get_metadata('top_level.txt').strip()
 
 # Simplify things by using the installed version
-version = '0.0.1' #pkg.version
+version = pkg.version
 release = version
 
 # ======================== General configuration ============================
