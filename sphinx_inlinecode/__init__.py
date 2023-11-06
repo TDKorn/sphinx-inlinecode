@@ -1,7 +1,7 @@
 import re
 import sphinx
 from pathlib import Path
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 from sphinx.application import Sphinx
 from bs4 import BeautifulSoup, Tag, NavigableString
 
@@ -82,7 +82,7 @@ def get_html_files(root: Path) -> List[Path]:
     return files
 
 
-def insert_source_code(file: Path, code_blocks: Dict[str, Tag]) -> BeautifulSoup:
+def insert_source_code(file: Path, code_blocks: Dict[str, Tag]) -> Optional[BeautifulSoup]:
     """Inserts source code blocks into the specified documentation HTML file.
 
     :param file: path to the HTML file.
@@ -92,8 +92,16 @@ def insert_source_code(file: Path, code_blocks: Dict[str, Tag]) -> BeautifulSoup
     soup = BeautifulSoup(file.read_text(encoding='utf-8'), 'html.parser')
     doc_entries = soup.findAll("dt", "sig sig-object py")
 
+    if not doc_entries:
+        return
+
     for doc_entry in doc_entries:
-        viewcode_link = doc_entry.find("a", "reference internal")
+        viewcode_label = doc_entry.find("span", "viewcode-link")
+
+        if not viewcode_label:
+            continue
+
+        viewcode_link = viewcode_label.parent
 
         if not (ref_id := doc_entry.get('id')):
             ref_id = get_ref_id(viewcode_link)
