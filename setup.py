@@ -35,6 +35,7 @@ setup(
     package_data={
         "sphinx_inlinecode": [
             "_static/sphinx-inlinecode.css",
+            "_static/sphinx-inlinecode.js",
         ],
     },
     classifiers=[

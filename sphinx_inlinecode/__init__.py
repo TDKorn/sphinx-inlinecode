@@ -16,6 +16,7 @@ def setup(app: Sphinx) -> Dict[str, Any]:
 
     app.setup_extension('sphinx.ext.viewcode')
     app.add_css_file("sphinx-inlinecode.css")
+    app.add_js_file('sphinx-inlinecode.js')
 
     return {'version': sphinx.__display_version__, 'parallel_read_safe': True}
 
