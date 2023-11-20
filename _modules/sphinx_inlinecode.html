@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sphinx_inlinecode &mdash; sphinx-inlinecode 1.3.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/github_style.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sphinx-inlinecode.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <link rel="canonical" href="https://sphinx-inlinecode.readthedocs.io/en/latest/_modules/sphinx_inlinecode.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/sphinx-inlinecode.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../contents.html" class="icon icon-home">
+            sphinx-inlinecode
+          </a>
+              <div class="version">
+                1.3.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">README</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">sphinx-inlinecode</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#configuration">Configuration</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html"><code class="docutils literal notranslate"><span class="pre">sphinx_inlinecode</span></code> package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#sphinx_inlinecode.setup"><code class="docutils literal notranslate"><span class="pre">setup()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#sphinx_inlinecode.add_static_path"><code class="docutils literal notranslate"><span class="pre">add_static_path()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#sphinx_inlinecode.add_source_code"><code class="docutils literal notranslate"><span class="pre">add_source_code()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#sphinx_inlinecode.get_code_blocks"><code class="docutils literal notranslate"><span class="pre">get_code_blocks()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#sphinx_inlinecode.get_html_files"><code class="docutils literal notranslate"><span class="pre">get_html_files()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#sphinx_inlinecode.insert_source_code"><code class="docutils literal notranslate"><span class="pre">insert_source_code()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#sphinx_inlinecode.get_ref_id"><code class="docutils literal notranslate"><span class="pre">get_ref_id()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#sphinx_inlinecode.wrap_code_block"><code class="docutils literal notranslate"><span class="pre">wrap_code_block()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#sphinx_inlinecode.adjust_indentation"><code class="docutils literal notranslate"><span class="pre">adjust_indentation()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../contents.html">sphinx-inlinecode</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../contents.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Module code</a></li>
+      <li class="breadcrumb-item active">sphinx_inlinecode</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for sphinx_inlinecode</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">sphinx</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
+<span class="kn">from</span> <span class="nn">sphinx.application</span> <span class="kn">import</span> <span class="n">Sphinx</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span><span class="p">,</span> <span class="n">Tag</span><span class="p">,</span> <span class="n">NavigableString</span>
+
+
+<span class="n">__version__</span> <span class="o">=</span> <span class="s2">&quot;1.3.2&quot;</span>
+<span class="n">__author__</span> <span class="o">=</span> <span class="s1">&#39;Adam Korn &lt;hello@dailykitten.net&gt;&#39;</span>
+
+
+<div class="viewcode-block" id="setup"><a class="viewcode-back" href="../modules.html#sphinx_inlinecode.setup">[docs]</a><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="n">Sphinx</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;builder-inited&quot;</span><span class="p">,</span> <span class="kp">add_static_path</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;build-finished&#39;</span><span class="p">,</span> <span class="kp">add_source_code</span><span class="p">)</span>
+
+    <span class="n">app</span><span class="o">.</span><span class="n">setup_extension</span><span class="p">(</span><span class="s1">&#39;sphinx.ext.viewcode&#39;</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_css_file</span><span class="p">(</span><span class="s2">&quot;sphinx-inlinecode.css&quot;</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_js_file</span><span class="p">(</span><span class="s1">&#39;sphinx-inlinecode.js&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="n">sphinx</span><span class="o">.</span><span class="n">__display_version__</span><span class="p">,</span> <span class="s1">&#39;parallel_read_safe&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span></div>
+
+
+<div class="viewcode-block" id="add_static_path"><a class="viewcode-back" href="../modules.html#sphinx_inlinecode.add_static_path">[docs]</a><span class="k">def</span> <span class="nf">add_static_path</span><span class="p">(</span><span class="n">app</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add the path for the ``_static`` folder&quot;&quot;&quot;</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">html_static_path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+        <span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s2">&quot;_static&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">absolute</span><span class="p">())</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="add_source_code"><a class="viewcode-back" href="../modules.html#sphinx_inlinecode.add_source_code">[docs]</a><span class="k">def</span> <span class="nf">add_source_code</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">exception</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Insert source code blocks into documentation entries.&quot;&quot;&quot;</span>
+    <span class="n">viewcode_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">outdir</span><span class="p">)</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s2">&quot;_modules&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">absolute</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">viewcode_dir</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+        <span class="k">return</span>
+
+    <span class="n">html_files</span> <span class="o">=</span> <span class="kp">get_html_files</span><span class="p">(</span><span class="n">viewcode_dir</span><span class="o">.</span><span class="n">parent</span><span class="p">)</span>
+    <span class="n">code_blocks</span> <span class="o">=</span> <span class="kp">get_code_blocks</span><span class="p">(</span><span class="n">viewcode_dir</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">html_files</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">result</span> <span class="o">:=</span> <span class="kp">insert_source_code</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">code_blocks</span><span class="p">):</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="p">),</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="get_code_blocks"><a class="viewcode-back" href="../modules.html#sphinx_inlinecode.get_code_blocks">[docs]</a><span class="k">def</span> <span class="nf">get_code_blocks</span><span class="p">(</span><span class="n">viewcode_dir</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Tag</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Retrieve code blocks from HTML files generated by :mod:`sphinx.ext.viewcode`</span>
+
+<span class="sd">    :param viewcode_dir: path of the ``build/html/_modules`` directory</span>
+<span class="sd">    :return: mapping of fully qualified object names to their HTML code block</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">files</span> <span class="o">=</span> <span class="kp">get_html_files</span><span class="p">(</span><span class="n">viewcode_dir</span><span class="p">)</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+        <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">),</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+        <span class="n">code_blocks</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="s1">&#39;viewcode-block&#39;</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">block</span> <span class="ow">in</span> <span class="n">code_blocks</span><span class="p">:</span>
+            <span class="n">backlink</span> <span class="o">=</span> <span class="n">block</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;viewcode-back&quot;</span><span class="p">)</span>
+            <span class="n">qualname</span> <span class="o">=</span> <span class="n">backlink</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span><span class="o">.</span><span class="kp">split</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">mapping</span><span class="p">[</span><span class="n">qualname</span><span class="p">]</span> <span class="o">=</span> <span class="n">block</span>
+
+            <span class="c1"># Remove internal link to documentation entry</span>
+            <span class="n">backlink</span><span class="o">.</span><span class="n">replace_with</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">mapping</span></div>
+
+
+<div class="viewcode-block" id="get_html_files"><a class="viewcode-back" href="../modules.html#sphinx_inlinecode.get_html_files">[docs]</a><span class="k">def</span> <span class="nf">get_html_files</span><span class="p">(</span><span class="n">root</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Path</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Retrieves all HTML files contained in the specified directory</span>
+
+<span class="sd">    :param root: path of the directory to search for HTML files in</span>
+<span class="sd">    :return: list of all HTML files in the directory and its subdirectories</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">files</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">root</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">entry</span><span class="o">.</span><span class="n">is_file</span><span class="p">()</span> <span class="ow">and</span> <span class="n">entry</span><span class="o">.</span><span class="n">suffix</span> <span class="o">==</span> <span class="s2">&quot;.html&quot;</span><span class="p">:</span>
+            <span class="n">files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">entry</span><span class="o">.</span><span class="n">is_dir</span><span class="p">():</span>
+            <span class="n">files</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="kp">get_html_files</span><span class="p">(</span><span class="n">entry</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">files</span></div>
+
+
+<div class="viewcode-block" id="insert_source_code"><a class="viewcode-back" href="../modules.html#sphinx_inlinecode.insert_source_code">[docs]</a><span class="k">def</span> <span class="nf">insert_source_code</span><span class="p">(</span><span class="n">file</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">code_blocks</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Tag</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">BeautifulSoup</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Inserts source code blocks into the specified documentation HTML file.</span>
+
+<span class="sd">    :param file: path to the HTML file.</span>
+<span class="sd">    :param code_blocks: dictionary containing code block data.</span>
+<span class="sd">    :return: HTML content of the file, with all code blocks inserted</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">),</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+    <span class="n">doc_entries</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s2">&quot;dt&quot;</span><span class="p">,</span> <span class="s2">&quot;sig sig-object py&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">doc_entries</span><span class="p">:</span>
+        <span class="k">return</span>
+
+    <span class="k">for</span> <span class="n">doc_entry</span> <span class="ow">in</span> <span class="n">doc_entries</span><span class="p">:</span>
+        <span class="n">viewcode_label</span> <span class="o">=</span> <span class="n">doc_entry</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,</span> <span class="s2">&quot;viewcode-link&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">viewcode_label</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">viewcode_link</span> <span class="o">=</span> <span class="n">viewcode_label</span><span class="o">.</span><span class="n">parent</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">ref_id</span> <span class="o">:=</span> <span class="n">doc_entry</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)):</span>
+            <span class="n">ref_id</span> <span class="o">=</span> <span class="kp">get_ref_id</span><span class="p">(</span><span class="n">viewcode_link</span><span class="p">)</span>
+
+        <span class="c1"># Insert formatted source code block after object signature.</span>
+        <span class="n">code_block</span> <span class="o">=</span> <span class="kp">wrap_code_block</span><span class="p">(</span><span class="n">code_blocks</span><span class="p">[</span><span class="n">ref_id</span><span class="p">])</span>
+        <span class="n">doc_entry</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">code_block</span><span class="p">)</span>
+
+        <span class="c1"># Remove viewcode link</span>
+        <span class="n">viewcode_link</span><span class="o">.</span><span class="n">replace_with</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">soup</span></div>
+
+
+<div class="viewcode-block" id="get_ref_id"><a class="viewcode-back" href="../modules.html#sphinx_inlinecode.get_ref_id">[docs]</a><span class="k">def</span> <span class="nf">get_ref_id</span><span class="p">(</span><span class="n">viewcode_link</span><span class="p">:</span> <span class="n">Tag</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parses the fully qualified object name from the viewcode internal reference</span>
+
+<span class="sd">    :param viewcode_link: the viewcode internal reference</span>
+<span class="sd">    :return: the fully qualified name of the referenced object</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">viewcode_link</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">removeprefix</span><span class="p">(</span><span class="s2">&quot;_modules/&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;html#&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="s2">&quot;.&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="wrap_code_block"><a class="viewcode-back" href="../modules.html#sphinx_inlinecode.wrap_code_block">[docs]</a><span class="k">def</span> <span class="nf">wrap_code_block</span><span class="p">(</span><span class="n">code_block</span><span class="p">:</span> <span class="n">Tag</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BeautifulSoup</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Wraps the given code block inside a &lt;details&gt; HTML element.</span>
+
+<span class="sd">    :param code_block: HTML of the code block to wrap.</span>
+<span class="sd">    :return: the wrapped code block.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">formatted_block</span> <span class="o">=</span> <span class="kp">adjust_indentation</span><span class="p">(</span><span class="n">code_block</span><span class="p">)</span>
+    <span class="n">html</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    &lt;details class=&quot;sphinx-inlinecode&quot;&gt;</span>
+<span class="s2">        &lt;summary&gt;</span>
+<span class="s2">            &lt;span class=&quot;pre&quot;&gt;View Source Code&lt;/span&gt;</span>
+<span class="s2">        &lt;/summary&gt;</span>
+<span class="s2">        &lt;div class=&quot;highlight&quot;&gt;</span>
+<span class="s2">            &lt;pre&gt;</span><span class="si">{adjusted_code_block}</span><span class="s2">&lt;/pre&gt;</span>
+<span class="s2">        &lt;/div&gt;</span>
+<span class="s2">    &lt;/details&gt;</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">adjusted_code_block</span><span class="o">=</span><span class="n">formatted_block</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="adjust_indentation"><a class="viewcode-back" href="../modules.html#sphinx_inlinecode.adjust_indentation">[docs]</a><span class="k">def</span> <span class="nf">adjust_indentation</span><span class="p">(</span><span class="n">code_block</span><span class="p">:</span> <span class="n">Tag</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tag</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Adjusts indentation of the code block by removing common leading whitespace.</span>
+
+<span class="sd">    :param code_block: HTML code block whose indentation needs adjustment.</span>
+<span class="sd">    :return: code block with adjusted indentation.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">contents</span> <span class="o">=</span> <span class="n">code_block</span><span class="o">.</span><span class="n">contents</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">contents</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">NavigableString</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">code_block</span>  <span class="c1"># Block has no indentation</span>
+
+    <span class="n">initial_indent</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">contents</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">pattern</span> <span class="o">=</span> <span class="sa">fr</span><span class="s2">&quot;[ ]</span><span class="se">{{</span><span class="si">{</span><span class="n">initial_indent</span><span class="si">}</span><span class="se">}}</span><span class="s2">(.*)&quot;</span>
+
+    <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">contents</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">NavigableString</span><span class="p">):</span>
+            <span class="n">replacement</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="kp">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;\1&quot;</span><span class="p">,</span> <span class="n">child</span><span class="p">)</span>
+            <span class="n">child</span><span class="o">.</span><span class="n">replace_with</span><span class="p">(</span><span class="n">replacement</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">replacement</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="kp">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;\1&quot;</span><span class="p">,</span> <span class="n">child</span><span class="o">.</span><span class="n">string</span><span class="p">)</span>
+            <span class="n">child</span><span class="o">.</span><span class="n">string</span> <span class="o">=</span> <span class="n">replacement</span>
+
+    <span class="k">return</span> <span class="n">code_block</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Adam Korn.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
