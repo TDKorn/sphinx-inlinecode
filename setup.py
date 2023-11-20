@@ -44,5 +44,5 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.10",
     ],
-    install_requires=["sphinx>=1.8"],
+    install_requires=["sphinx>=1.8", "beautifulsoup4"],
 )
