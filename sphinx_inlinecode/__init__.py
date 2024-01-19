@@ -153,17 +153,26 @@ def adjust_indentation(code_block: Tag) -> Tag:
     :return: code block with adjusted indentation.
     """
     contents = code_block.contents
+    for child in list(contents):  # Remove leading newlines added in newer Sphinx versions
+        if child == '\n':
+            child.replace_with()
+        else:
+            break
 
     if not isinstance(contents[0], NavigableString):
         return code_block  # Block has no indentation
 
-    initial_indent = len(contents[0])
+    initial_indent = len(contents[0].lstrip('\n'))
     pattern = fr"[ ]{{{initial_indent}}}(.*)"
 
     for child in contents:
         if isinstance(child, NavigableString):
-            replacement = re.sub(pattern, r"\1", child)
+            replacement = re.sub(pattern, r"\1", child.lstrip('\n'))
             child.replace_with(replacement)
+
+        elif child.string is None:  # A nested code block (in newer Sphinx versions)
+            adjust_indentation(child)
+
         else:
             replacement = re.sub(pattern, r"\1", child.string)
             child.string = replacement
