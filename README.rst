@@ -1,3 +1,9 @@
+.. |.functools.cached_property+cached_property| replace:: ``cached_property``
+.. _.functools.cached_property+cached_property: https://docs.python.org/3/library/functools.html#functools.cached_property
+.. |.property| replace:: ``property``
+.. _.property: https://docs.python.org/3/library/functions.html#property
+.. |.sphinx.ext.viewcode| replace:: ``sphinx.ext.viewcode``
+.. _.sphinx.ext.viewcode: https://www.sphinx-doc.org/en/master/usage/extensions/viewcode.html#module-sphinx.ext.viewcode
 
 
 .. meta::
@@ -39,7 +45,8 @@ sphinx-inlinecode
 
 
 
-|
+Unlike |.sphinx.ext.viewcode|_, source code blocks will also be added for |.property|_ and |.functools.cached_property+cached_property|_ entries
+
 
 Installation
 ~~~~~~~~~~~~
@@ -70,3 +77,4 @@ Full documentation can be found on |RTD|_
 
 .. |RTD| replace:: ReadTheDocs
 .. _RTD: https://sphinx-inlinecode.readthedocs.io/en/latest/
+

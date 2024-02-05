@@ -40,11 +40,12 @@ sphinx-inlinecode
 
 .. only:: html
 
-   .. autofunction:: sphinx_inlinecode.adjust_indentation
+   .. autofunction:: sphinx_inlinecode.get_code_block
       :noindex:
 
 
-|
+Unlike :mod:`sphinx.ext.viewcode`, source code blocks will also be added for :external:class:`property` and :external:func:`cached_property <functools.cached_property>` entries
+
 
 Installation
 ~~~~~~~~~~~~
