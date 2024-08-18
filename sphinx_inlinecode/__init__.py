@@ -124,6 +124,11 @@ def add_code_blocks(file: Path, objects: Dict[str, Any], highlighter: "PythonLex
             else:
                 target = get_target(viewcode_label.parent)
 
+        # this can happen if documentation is not structured perfectly
+        # skipping keys which don't exist allow the documentation to be built even if the structure isn't perfect
+        if target not in objects:
+            continue
+
         # Highlight and insert the source code block after the object signature
         code_block = get_code_block(target, objects[target], highlighter)
         doc_entry.append(code_block)
