@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html class="writer-html5" lang="en">
+<head>
+<meta charset="utf-8"/><meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
+<meta content="Adam Korn" name="author"/>
+<meta content="sphinx-inlinecode - embed source code blocks directly into Sphinx documentation" name="title"/>
+<meta content="A Sphinx extension to embed source code blocks directly into Sphinx documentation" name="description"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>sphinx-inlinecode — sphinx-inlinecode 2.0.0 documentation</title>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="_static/css/theme.css" rel="stylesheet" type="text/css"/>
+<link href="_static/github_style.css" rel="stylesheet" type="text/css"/>
+<link href="_static/sphinx-inlinecode.css" rel="stylesheet" type="text/css"/>
+<link href="_static/custom.css" rel="stylesheet" type="text/css"/>
+<link href="https://sphinx-inlinecode.readthedocs.io/en/latest/index.html" rel="canonical"/>
+<!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+<script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+<script src="_static/jquery.js"></script>
+<script src="_static/underscore.js"></script>
+<script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="_static/doctools.js"></script>
+<script src="_static/sphinx_highlight.js"></script>
+<script src="_static/sphinx-inlinecode.js"></script>
+<script src="_static/js/theme.js"></script>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="modules.html" rel="next" title="sphinx_inlinecode package"/>
+<link href="contents.html" rel="prev" title="Table Of Contents"/>
+</head>
+<body class="wy-body-for-nav">
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href="contents.html">
+            sphinx-inlinecode
+          </a>
+<div class="version">
+                2.0.0
+              </div>
+<div role="search">
+<form action="search.html" class="wy-form" id="rtd-search-form" method="get">
+<input aria-label="Search docs" name="q" placeholder="Search docs" type="text"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+</div><div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption" role="heading"><span class="caption-text">README</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">sphinx-inlinecode</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html"><code class="docutils literal notranslate"><span class="pre">sphinx_inlinecode</span></code> package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#sphinx_inlinecode.BAD_OBJTYPES"><code class="docutils literal notranslate"><span class="pre">BAD_OBJTYPES</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#sphinx_inlinecode.setup"><code class="docutils literal notranslate"><span class="pre">setup()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#sphinx_inlinecode.add_static_path"><code class="docutils literal notranslate"><span class="pre">add_static_path()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#sphinx_inlinecode.add_source_code"><code class="docutils literal notranslate"><span class="pre">add_source_code()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#sphinx_inlinecode.parse_py_domain"><code class="docutils literal notranslate"><span class="pre">parse_py_domain()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#sphinx_inlinecode.add_code_blocks"><code class="docutils literal notranslate"><span class="pre">add_code_blocks()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#sphinx_inlinecode.get_target"><code class="docutils literal notranslate"><span class="pre">get_target()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#sphinx_inlinecode.get_code_block"><code class="docutils literal notranslate"><span class="pre">get_code_block()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#sphinx_inlinecode.wrap_code_block"><code class="docutils literal notranslate"><span class="pre">wrap_code_block()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift"><nav aria-label="Mobile navigation menu" class="wy-nav-top">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="contents.html">sphinx-inlinecode</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content">
+<div aria-label="Page navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a aria-label="Home" class="icon icon-home" href="contents.html"></a></li>
+<li class="breadcrumb-item active">sphinx-inlinecode</li>
+<li class="wy-breadcrumbs-aside">
+<a class="fa fa-github" href="https://github.com/TDKorn/sphinx-inlinecode/blob/index.rst"> Edit on GitHub</a>
+</li>
+</ul><div aria-label="Sequential page navigation" class="rst-breadcrumbs-buttons" role="navigation">
+<a accesskey="p" class="btn btn-neutral float-left" href="contents.html" title="Table Of Contents"><span aria-hidden="true" class="fa fa-arrow-circle-left"></span> Previous</a>
+<a accesskey="n" class="btn btn-neutral float-right" href="modules.html" title="sphinx_inlinecode package">Next <span aria-hidden="true" class="fa fa-arrow-circle-right"></span></a>
+</div>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div itemprop="articleBody">
+<section id="sphinx-inlinecode">
+<h1>sphinx-inlinecode<a class="headerlink" href="#sphinx-inlinecode" title="Permalink to this heading"></a></h1>
+<a class="reference external image-reference" href="https://pypi.org/project/sphinx-inlinecode/"><img alt="sphinx-inlinecode PyPI Version" src="https://img.shields.io/pypi/v/sphinx-inlinecode?color=eb5202"/></a>
+<a class="reference external image-reference" href="https://github.com/tdkorn/sphinx-inlinecode/"><img alt="sphinx-inlinecode GitHub Repository" src="https://img.shields.io/badge/GitHub-sphinx--inlinecode-4f1abc"/></a>
+<a class="reference external image-reference" href="https://pepy.tech/project/sphinx-inlinecode/"><img alt="https://static.pepy.tech/personalized-badge/sphinx-inlinecode?period=total&amp;units=none&amp;left_color=grey&amp;right_color=blue&amp;left_text=Downloads" src="https://static.pepy.tech/personalized-badge/sphinx-inlinecode?period=total&amp;units=none&amp;left_color=grey&amp;right_color=blue&amp;left_text=Downloads"/></a>
+<a class="reference external image-reference" href="https://sphinx-inlinecode.readthedocs.io/en/latest/?badge=latest"><img alt="sphinx-inlinecode Documentation Status" src="https://readthedocs.org/projects/sphinx-inlinecode/badge/?version=latest"/></a>
+<p><code class="docutils literal notranslate"><span class="pre">sphinx-inlinecode</span></code> is a Sphinx extension that embeds source code blocks directly into your documentation as a dropdown.</p>
+<p class="rubric">Example</p>
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">sphinx_inlinecode.</span></span><span class="sig-name descname"><span class="pre">get_code_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qualname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">highlighter</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/TDKorn/sphinx-inlinecode/blob/main/sphinx_inlinecode/__init__.py#L148-L176"><span class="linkcode-link"><span class="pre">View</span> <span class="pre">on</span> <span class="pre">GitHub</span></span></a>
+<details class="sphinx-inlinecode">
+<summary>
+<span class="pre">View Source Code</span>
+</summary>
+<div class="highlight"><pre><div class="viewcode-block" id="sphinx_inlinecode.get_code_block"><span class="k">def</span> <span class="nf">get_code_block</span><span class="p">(</span><span class="n">qualname</span><span class="p">:</span> <span class="bp">str</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="nc">Any</span><span class="p">,</span> <span class="n">highlighter</span><span class="p">:</span> <span class="nc">PythonLexer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nc">BeautifulSoup</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Parses and highlights the source code lines of the provided object</span>
+
+<span class="sd">    :param qualname: the fully qualified name of the object</span>
+<span class="sd">    :param obj: the actual object to retrieve the source code lines from</span>
+<span class="sd">    :param highlighter: the Pygments lexer to highlight the code block with</span>
+<span class="sd">    :return: the highlighted and fully formatted HTML codeblock to insert</span>
+<span class="sd">    """</span>
+    <span class="n">sourcelines</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="kp">getsourcelines</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+    <span class="n">initial_indent</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sourcelines</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">sourcelines</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="kp">lstrip</span><span class="p">())</span>
+
+    <span class="k">if</span> <span class="n">initial_indent</span><span class="p">:</span>  <span class="c1"># Remove common leading whitespace</span>
+        <span class="n">pattern</span> <span class="o">=</span> <span class="sa">fr</span><span class="s2">"[ ]</span><span class="se">{{</span><span class="si">{</span><span class="n">initial_indent</span><span class="si">}</span><span class="se">}}</span><span class="s2">(.*)"</span>
+        <span class="n">sourcelines</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">re</span><span class="o">.</span><span class="kp">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="sa">r</span><span class="s2">"\1"</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">sourcelines</span>
+        <span class="p">)</span>
+    <span class="c1"># Convert to HTML code block with syntax highlighting</span>
+    <span class="n">highlighted</span> <span class="o">=</span> <span class="n">highlighter</span><span class="o">.</span><span class="kp">highlight_block</span><span class="p">(</span>
+        <span class="n">source</span><span class="o">=</span><span class="s1">''</span><span class="o">.</span><span class="kp">join</span><span class="p">(</span><span class="n">sourcelines</span><span class="p">),</span>
+        <span class="n">lang</span><span class="o">=</span><span class="s1">'python'</span><span class="p">,</span>
+        <span class="n">linenos</span><span class="o">=</span><span class="kc">False</span>
+    <span class="p">)</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">highlighted</span><span class="o">.</span><span class="kp">splitlines</span><span class="p">()</span>
+    <span class="n">before</span><span class="p">,</span> <span class="n">after</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="kp">split</span><span class="p">(</span><span class="sa">r</span><span class="s2">"&lt;pre&gt;(?:&lt;span&gt;&lt;/span&gt;)?"</span><span class="p">,</span> <span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">before</span><span class="si">}</span><span class="s1">&lt;pre&gt;&lt;div class="viewcode-block" id="</span><span class="si">{</span><span class="n">qualname</span><span class="si">}</span><span class="s1">"&gt;</span><span class="si">{</span><span class="n">after</span><span class="si">}</span><span class="s1">'</span>
+
+    <span class="n">code_block</span> <span class="o">=</span> <span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="o">.</span><span class="kp">join</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kp">wrap_code_block</span><span class="p">(</span><span class="n">code_block</span><span class="p">)</span>
+</div></pre></div>
+</details>
+</dt>
+<dd><p>Parses and highlights the source code lines of the provided object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qualname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – the fully qualified name of the object</p></li>
+<li><p><strong>obj</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><em>Any</em></a>) – the actual object to retrieve the source code lines from</p></li>
+<li><p><strong>highlighter</strong> (<em>PythonLexer</em>) – the Pygments lexer to highlight the code block with</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the highlighted and fully formatted HTML codeblock to insert</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.html#bs4.BeautifulSoup" title="(in Beautiful Soup v4)"><em>BeautifulSoup</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+<p>Unlike <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/viewcode.html#module-sphinx.ext.viewcode" title="(in Sphinx v8.1.0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sphinx.ext.viewcode</span></code></a>, source code blocks will also be added for <a class="reference external" href="https://docs.python.org/3/library/functions.html#property" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">property</span></code></a> and <a class="reference external" href="https://docs.python.org/3/library/functools.html#functools.cached_property" title="(in Python v3.12)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cached_property</span></code></a> entries</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<p>To install <code class="docutils literal notranslate"><span class="pre">sphinx-inlinecode</span></code> via pip:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">inlinecode</span>
+</pre></div>
+</div>
+</section>
+<section id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading"></a></h2>
+<p>Add the extension to your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">"sphinx_inlinecode"</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+</section>
+</div>
+</div>
+<footer><div aria-label="Footer" class="rst-footer-buttons" role="navigation">
+<a accesskey="p" class="btn btn-neutral float-left" href="contents.html" rel="prev" title="Table Of Contents"><span aria-hidden="true" class="fa fa-arrow-circle-left"></span> Previous</a>
+<a accesskey="n" class="btn btn-neutral float-right" href="modules.html" rel="next" title="sphinx_inlinecode package">Next <span aria-hidden="true" class="fa fa-arrow-circle-right"></span></a>
+</div>
+<hr/>
+<div role="contentinfo">
+<p>© Copyright 2023, Adam Korn.</p>
+</div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+</div>
+</div>
+</section>
+</div>
+<script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+</body>
+</html>

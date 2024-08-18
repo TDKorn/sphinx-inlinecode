@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+
+<html class="writer-html5" lang="en">
+<head>
+<meta charset="utf-8"/><meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>sphinx_inlinecode package — sphinx-inlinecode 2.0.0 documentation</title>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="_static/css/theme.css" rel="stylesheet" type="text/css"/>
+<link href="_static/github_style.css" rel="stylesheet" type="text/css"/>
+<link href="_static/sphinx-inlinecode.css" rel="stylesheet" type="text/css"/>
+<link href="_static/custom.css" rel="stylesheet" type="text/css"/>
+<link href="https://sphinx-inlinecode.readthedocs.io/en/latest/modules.html" rel="canonical"/>
+<!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+<script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+<script src="_static/jquery.js"></script>
+<script src="_static/underscore.js"></script>
+<script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="_static/doctools.js"></script>
+<script src="_static/sphinx_highlight.js"></script>
+<script src="_static/sphinx-inlinecode.js"></script>
+<script src="_static/js/theme.js"></script>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="index.html" rel="prev" title="sphinx-inlinecode"/>
+</head>
+<body class="wy-body-for-nav">
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href="contents.html">
+            sphinx-inlinecode
+          </a>
+<div class="version">
+                2.0.0
+              </div>
+<div role="search">
+<form action="search.html" class="wy-form" id="rtd-search-form" method="get">
+<input aria-label="Search docs" name="q" placeholder="Search docs" type="text"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+</div><div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption" role="heading"><span class="caption-text">README</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">sphinx-inlinecode</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#configuration">Configuration</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">sphinx_inlinecode</span></code> package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx_inlinecode.BAD_OBJTYPES"><code class="docutils literal notranslate"><span class="pre">BAD_OBJTYPES</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx_inlinecode.setup"><code class="docutils literal notranslate"><span class="pre">setup()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx_inlinecode.add_static_path"><code class="docutils literal notranslate"><span class="pre">add_static_path()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx_inlinecode.add_source_code"><code class="docutils literal notranslate"><span class="pre">add_source_code()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx_inlinecode.parse_py_domain"><code class="docutils literal notranslate"><span class="pre">parse_py_domain()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx_inlinecode.add_code_blocks"><code class="docutils literal notranslate"><span class="pre">add_code_blocks()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx_inlinecode.get_target"><code class="docutils literal notranslate"><span class="pre">get_target()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx_inlinecode.get_code_block"><code class="docutils literal notranslate"><span class="pre">get_code_block()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx_inlinecode.wrap_code_block"><code class="docutils literal notranslate"><span class="pre">wrap_code_block()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift"><nav aria-label="Mobile navigation menu" class="wy-nav-top">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="contents.html">sphinx-inlinecode</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content">
+<div aria-label="Page navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a aria-label="Home" class="icon icon-home" href="contents.html"></a></li>
+<li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">sphinx_inlinecode</span></code> package</li>
+<li class="wy-breadcrumbs-aside">
+<a class="fa fa-github" href="https://github.com/TDKorn/sphinx-inlinecode/blob/modules.rst"> Edit on GitHub</a>
+</li>
+</ul><div aria-label="Sequential page navigation" class="rst-breadcrumbs-buttons" role="navigation">
+<a accesskey="p" class="btn btn-neutral float-left" href="index.html" title="sphinx-inlinecode"><span aria-hidden="true" class="fa fa-arrow-circle-left"></span> Previous</a>
+</div>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div itemprop="articleBody">
+<section id="module-sphinx_inlinecode">
+<span id="sphinx-inlinecode-package"></span><h1><code class="docutils literal notranslate"><span class="pre">sphinx_inlinecode</span></code> package<a class="headerlink" href="#module-sphinx_inlinecode" title="Permalink to this heading"></a></h1>
+<dl class="py data">
+<dt class="sig sig-object py" id="sphinx_inlinecode.BAD_OBJTYPES">
+<span class="sig-prename descclassname"><span class="pre">sphinx_inlinecode.</span></span><span class="sig-name descname"><span class="pre">BAD_OBJTYPES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('attribute',</span> <span class="pre">'data',</span> <span class="pre">'decorator')</span></em><a class="headerlink" href="#sphinx_inlinecode.BAD_OBJTYPES" title="Permalink to this definition"></a></dt>
+<dd><p>Object types that can’t have code blocks inserted</p>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="sphinx_inlinecode.setup">
+<span class="sig-prename descclassname"><span class="pre">sphinx_inlinecode.</span></span><span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/TDKorn/sphinx-inlinecode/blob/main/sphinx_inlinecode/__init__.py#L24-L32"><span class="linkcode-link"><span class="pre">View</span> <span class="pre">on</span> <span class="pre">GitHub</span></span></a><a class="headerlink" href="#sphinx_inlinecode.setup" title="Permalink to this definition"></a>
+<details class="sphinx-inlinecode">
+<summary>
+<span class="pre">View Source Code</span>
+</summary>
+<div class="highlight"><pre><div class="viewcode-block" id="sphinx_inlinecode.setup"><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="nc">Sphinx</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nc">Dict</span><span class="p">[</span><span class="bp">str</span><span class="p">,</span> <span class="nc">Any</span><span class="p">]:</span>
+    <span class="n">app</span><span class="o">.</span><span class="kp">connect</span><span class="p">(</span><span class="s2">"builder-inited"</span><span class="p">,</span> <span class="n">add_static_path</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="kp">connect</span><span class="p">(</span><span class="s1">'build-finished'</span><span class="p">,</span> <span class="n">add_source_code</span><span class="p">)</span>
+
+    <span class="n">app</span><span class="o">.</span><span class="kp">setup_extension</span><span class="p">(</span><span class="s1">'sphinx.ext.viewcode'</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="kp">add_css_file</span><span class="p">(</span><span class="s2">"sphinx-inlinecode.css"</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="kp">add_js_file</span><span class="p">(</span><span class="s1">'sphinx-inlinecode.js'</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">{</span><span class="s1">'version'</span><span class="p">:</span> <span class="n">sphinx</span><span class="o">.</span><span class="n">__display_version__</span><span class="p">,</span> <span class="s1">'parallel_read_safe'</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+</div></pre></div>
+</details>
+</dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.12)"><em>Dict</em></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><em>Any</em></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="sphinx_inlinecode.add_static_path">
+<span class="sig-prename descclassname"><span class="pre">sphinx_inlinecode.</span></span><span class="sig-name descname"><span class="pre">add_static_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/TDKorn/sphinx-inlinecode/blob/main/sphinx_inlinecode/__init__.py#L35-L39"><span class="linkcode-link"><span class="pre">View</span> <span class="pre">on</span> <span class="pre">GitHub</span></span></a><a class="headerlink" href="#sphinx_inlinecode.add_static_path" title="Permalink to this definition"></a>
+<details class="sphinx-inlinecode">
+<summary>
+<span class="pre">View Source Code</span>
+</summary>
+<div class="highlight"><pre><div class="viewcode-block" id="sphinx_inlinecode.add_static_path"><span class="k">def</span> <span class="nf">add_static_path</span><span class="p">(</span><span class="n">app</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Add the path for the ``_static`` folder"""</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">html_static_path</span><span class="o">.</span><span class="kp">append</span><span class="p">(</span>
+        <span class="nb">str</span><span class="p">(</span><span class="nc">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="kp">joinpath</span><span class="p">(</span><span class="s2">"_static"</span><span class="p">)</span><span class="o">.</span><span class="kp">absolute</span><span class="p">())</span>
+    <span class="p">)</span>
+</div></pre></div>
+</details>
+</dt>
+<dd><p>Add the path for the <code class="docutils literal notranslate"><span class="pre">_static</span></code> folder</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="sphinx_inlinecode.add_source_code">
+<span class="sig-prename descclassname"><span class="pre">sphinx_inlinecode.</span></span><span class="sig-name descname"><span class="pre">add_source_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exception</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/TDKorn/sphinx-inlinecode/blob/main/sphinx_inlinecode/__init__.py#L42-L54"><span class="linkcode-link"><span class="pre">View</span> <span class="pre">on</span> <span class="pre">GitHub</span></span></a><a class="headerlink" href="#sphinx_inlinecode.add_source_code" title="Permalink to this definition"></a>
+<details class="sphinx-inlinecode">
+<summary>
+<span class="pre">View Source Code</span>
+</summary>
+<div class="highlight"><pre><div class="viewcode-block" id="sphinx_inlinecode.add_source_code"><span class="k">def</span> <span class="nf">add_source_code</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="nc">Sphinx</span><span class="p">,</span> <span class="n">exception</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Inserts source code blocks into documentation entries."""</span>
+    <span class="k">if</span> <span class="n">app</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">name</span> <span class="o">!=</span> <span class="s1">'html'</span><span class="p">:</span>
+        <span class="k">return</span>
+
+    <span class="n">highlighter</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">highlighter</span>
+    <span class="n">outdir</span> <span class="o">=</span> <span class="nc">Path</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">outdir</span><span class="p">)</span>
+    <span class="n">objects</span> <span class="o">=</span> <span class="kp">parse_py_domain</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">app</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">found_docs</span><span class="p">:</span>  <span class="c1"># Check if the file has any documentation entries</span>
+        <span class="k">if</span> <span class="n">app</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="kp">get_doctree</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span><span class="o">.</span><span class="kp">traverse</span><span class="p">(</span><span class="n">addnodes</span><span class="o">.</span><span class="n">desc_signature</span><span class="p">):</span>
+            <span class="n">file</span> <span class="o">=</span> <span class="n">outdir</span><span class="o">.</span><span class="kp">joinpath</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">doc</span><span class="si">}</span><span class="s2">.html"</span><span class="p">)</span>
+            <span class="kp">add_code_blocks</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">objects</span><span class="p">,</span> <span class="n">highlighter</span><span class="p">)</span>
+</div></pre></div>
+</details>
+</dt>
+<dd><p>Inserts source code blocks into documentation entries.</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="sphinx_inlinecode.parse_py_domain">
+<span class="sig-prename descclassname"><span class="pre">sphinx_inlinecode.</span></span><span class="sig-name descname"><span class="pre">parse_py_domain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/TDKorn/sphinx-inlinecode/blob/main/sphinx_inlinecode/__init__.py#L57-L100"><span class="linkcode-link"><span class="pre">View</span> <span class="pre">on</span> <span class="pre">GitHub</span></span></a><a class="headerlink" href="#sphinx_inlinecode.parse_py_domain" title="Permalink to this definition"></a>
+<details class="sphinx-inlinecode">
+<summary>
+<span class="pre">View Source Code</span>
+</summary>
+<div class="highlight"><pre><div class="viewcode-block" id="sphinx_inlinecode.parse_py_domain"><span class="k">def</span> <span class="nf">parse_py_domain</span><span class="p">(</span><span class="n">app</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nc">Dict</span><span class="p">[</span><span class="bp">str</span><span class="p">,</span> <span class="nc">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">"""Parses all Python objects in the package from the :external:class:`~.BuildEnvironment`</span>
+
+<span class="sd">    :returns: a dictionary mapping fully qualified object names to the actual objects</span>
+<span class="sd">    """</span>
+    <span class="n">py_objects</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">domaindata</span><span class="o">.</span><span class="kp">get</span><span class="p">(</span><span class="s1">'py'</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="kp">get</span><span class="p">(</span><span class="s2">"objects"</span><span class="p">,</span> <span class="p">{})</span>
+    <span class="n">object_map</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">for</span> <span class="n">qualname</span><span class="p">,</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">py_objects</span><span class="o">.</span><span class="kp">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">entry</span><span class="o">.</span><span class="n">objtype</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">"attribute"</span><span class="p">,</span> <span class="s2">"data"</span><span class="p">,</span> <span class="s2">"decorator"</span><span class="p">):</span>
+            <span class="k">continue</span>  <span class="c1"># Cannot get source code lines</span>
+
+        <span class="n">parts</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="n">node_id</span><span class="o">.</span><span class="kp">removeprefix</span><span class="p">(</span><span class="s1">'module-'</span><span class="p">)</span><span class="o">.</span><span class="kp">split</span><span class="p">(</span><span class="s1">'.'</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">entry</span><span class="o">.</span><span class="n">objtype</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">"class"</span><span class="p">,</span> <span class="s2">"function"</span><span class="p">,</span> <span class="s2">"module"</span><span class="p">,</span> <span class="s2">"exception"</span><span class="p">):</span>
+            <span class="n">module</span> <span class="o">=</span> <span class="s1">'.'</span><span class="o">.</span><span class="kp">join</span><span class="p">(</span><span class="n">parts</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="kp">removeprefix</span><span class="p">(</span><span class="s1">'module-'</span><span class="p">)</span>
+            <span class="n">fullname</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="k">elif</span> <span class="n">entry</span><span class="o">.</span><span class="n">objtype</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">"method"</span><span class="p">,</span> <span class="s2">"property"</span><span class="p">):</span>
+            <span class="n">module</span> <span class="o">=</span> <span class="s1">'.'</span><span class="o">.</span><span class="kp">join</span><span class="p">(</span><span class="n">parts</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+            <span class="n">fullname</span> <span class="o">=</span> <span class="s1">'.'</span><span class="o">.</span><span class="kp">join</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:])</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">submod</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="o">.</span><span class="kp">get</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">submod</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">submod</span>
+        <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">fullname</span><span class="o">.</span><span class="kp">split</span><span class="p">(</span><span class="s1">'.'</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">obj</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">part</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">property</span><span class="p">):</span>
+            <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">fget</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">cached_property</span><span class="p">):</span>
+            <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">func</span>
+
+        <span class="n">object_map</span><span class="p">[</span><span class="n">qualname</span><span class="p">]</span> <span class="o">=</span> <span class="n">obj</span>
+
+    <span class="k">return</span> <span class="n">object_map</span>
+</div></pre></div>
+</details>
+</dt>
+<dd><p>Parses all Python objects in the package from the <code class="xref py py-class docutils literal notranslate"><span class="pre">BuildEnvironment</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a dictionary mapping fully qualified object names to the actual objects</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.12)"><em>Dict</em></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><em>Any</em></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="sphinx_inlinecode.add_code_blocks">
+<span class="sig-prename descclassname"><span class="pre">sphinx_inlinecode.</span></span><span class="sig-name descname"><span class="pre">add_code_blocks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objects</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">highlighter</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/TDKorn/sphinx-inlinecode/blob/main/sphinx_inlinecode/__init__.py#L103-L136"><span class="linkcode-link"><span class="pre">View</span> <span class="pre">on</span> <span class="pre">GitHub</span></span></a><a class="headerlink" href="#sphinx_inlinecode.add_code_blocks" title="Permalink to this definition"></a>
+<details class="sphinx-inlinecode">
+<summary>
+<span class="pre">View Source Code</span>
+</summary>
+<div class="highlight"><pre><div class="viewcode-block" id="sphinx_inlinecode.add_code_blocks"><span class="k">def</span> <span class="nf">add_code_blocks</span><span class="p">(</span><span class="n">file</span><span class="p">:</span> <span class="nc">Path</span><span class="p">,</span> <span class="n">objects</span><span class="p">:</span> <span class="nc">Dict</span><span class="p">[</span><span class="bp">str</span><span class="p">,</span> <span class="nc">Any</span><span class="p">],</span> <span class="n">highlighter</span><span class="p">:</span> <span class="s2">"PythonLexer"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Inserts source code blocks into the provided HTML file and writes the output.</span>
+
+<span class="sd">    :param file: path to the HTML file.</span>
+<span class="sd">    :param objects: dictionary containing the objects in the package</span>
+<span class="sd">    :param highlighter: the Pygments lexer to highlight source code blocks with</span>
+<span class="sd">    """</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="nc">BeautifulSoup</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="kp">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">),</span> <span class="s1">'html.parser'</span><span class="p">)</span>
+    <span class="n">doc_entries</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="kp">findAll</span><span class="p">(</span><span class="s2">"dt"</span><span class="p">,</span> <span class="s2">"sig sig-object py"</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">doc_entry</span> <span class="ow">in</span> <span class="n">doc_entries</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">doc_entry</span><span class="o">.</span><span class="n">parent</span><span class="p">[</span><span class="s1">'class'</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="nc">BAD_OBJTYPES</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">target</span> <span class="o">=</span> <span class="n">doc_entry</span><span class="o">.</span><span class="kp">get</span><span class="p">(</span><span class="s1">'id'</span><span class="p">)</span>
+        <span class="n">viewcode_label</span> <span class="o">=</span> <span class="n">doc_entry</span><span class="o">.</span><span class="kp">find</span><span class="p">(</span><span class="s2">"span"</span><span class="p">,</span> <span class="s2">"viewcode-link"</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">target</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">viewcode_label</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">target</span> <span class="o">=</span> <span class="kp">get_target</span><span class="p">(</span><span class="n">viewcode_label</span><span class="o">.</span><span class="n">parent</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">obj</span> <span class="o">:=</span> <span class="n">objects</span><span class="o">.</span><span class="kp">get</span><span class="p">(</span><span class="n">target</span><span class="p">)):</span>
+            <span class="k">continue</span>
+
+        <span class="c1"># Highlight and insert the source code block after the object signature</span>
+        <span class="n">code_block</span> <span class="o">=</span> <span class="kp">get_code_block</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">highlighter</span><span class="p">)</span>
+        <span class="n">doc_entry</span><span class="o">.</span><span class="kp">append</span><span class="p">(</span><span class="n">code_block</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">viewcode_label</span><span class="p">:</span>  <span class="c1"># Remove the viewcode link, if it exists</span>
+            <span class="n">viewcode_label</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="kp">replace_with</span><span class="p">()</span>
+
+    <span class="n">file</span><span class="o">.</span><span class="kp">write_text</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">soup</span><span class="p">),</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)</span>
+</div></pre></div>
+</details>
+</dt>
+<dd><p>Inserts source code blocks into the provided HTML file and writes the output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file</strong> (<a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.12)"><em>Path</em></a>) – path to the HTML file.</p></li>
+<li><p><strong>objects</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.12)"><em>Dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><em>Any</em></a><em>]</em>) – dictionary containing the objects in the package</p></li>
+<li><p><strong>highlighter</strong> (<em>PythonLexer</em>) – the Pygments lexer to highlight source code blocks with</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="sphinx_inlinecode.get_target">
+<span class="sig-prename descclassname"><span class="pre">sphinx_inlinecode.</span></span><span class="sig-name descname"><span class="pre">get_target</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">viewcode_link</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/TDKorn/sphinx-inlinecode/blob/main/sphinx_inlinecode/__init__.py#L139-L145"><span class="linkcode-link"><span class="pre">View</span> <span class="pre">on</span> <span class="pre">GitHub</span></span></a><a class="headerlink" href="#sphinx_inlinecode.get_target" title="Permalink to this definition"></a>
+<details class="sphinx-inlinecode">
+<summary>
+<span class="pre">View Source Code</span>
+</summary>
+<div class="highlight"><pre><div class="viewcode-block" id="sphinx_inlinecode.get_target"><span class="k">def</span> <span class="nf">get_target</span><span class="p">(</span><span class="n">viewcode_link</span><span class="p">:</span> <span class="nc">Tag</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Parses the fully qualified object name from the viewcode internal reference</span>
+
+<span class="sd">    :param viewcode_link: the viewcode internal reference</span>
+<span class="sd">    :return: the fully qualified name of the referenced object</span>
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="n">viewcode_link</span><span class="o">.</span><span class="kp">get</span><span class="p">(</span><span class="s1">'href'</span><span class="p">)</span><span class="o">.</span><span class="kp">removeprefix</span><span class="p">(</span><span class="s2">"_modules/"</span><span class="p">)</span><span class="o">.</span><span class="kp">replace</span><span class="p">(</span><span class="s2">"html#"</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span><span class="o">.</span><span class="kp">replace</span><span class="p">(</span><span class="s2">"/"</span><span class="p">,</span> <span class="s2">"."</span><span class="p">)</span>
+</div></pre></div>
+</details>
+</dt>
+<dd><p>Parses the fully qualified object name from the viewcode internal reference</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>viewcode_link</strong> (<em>Tag</em>) – the viewcode internal reference</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the fully qualified name of the referenced object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="sphinx_inlinecode.get_code_block">
+<span class="sig-prename descclassname"><span class="pre">sphinx_inlinecode.</span></span><span class="sig-name descname"><span class="pre">get_code_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qualname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">highlighter</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/TDKorn/sphinx-inlinecode/blob/main/sphinx_inlinecode/__init__.py#L148-L176"><span class="linkcode-link"><span class="pre">View</span> <span class="pre">on</span> <span class="pre">GitHub</span></span></a><a class="headerlink" href="#sphinx_inlinecode.get_code_block" title="Permalink to this definition"></a>
+<details class="sphinx-inlinecode">
+<summary>
+<span class="pre">View Source Code</span>
+</summary>
+<div class="highlight"><pre><div class="viewcode-block" id="sphinx_inlinecode.get_code_block"><span class="k">def</span> <span class="nf">get_code_block</span><span class="p">(</span><span class="n">qualname</span><span class="p">:</span> <span class="bp">str</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="nc">Any</span><span class="p">,</span> <span class="n">highlighter</span><span class="p">:</span> <span class="nc">PythonLexer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nc">BeautifulSoup</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Parses and highlights the source code lines of the provided object</span>
+
+<span class="sd">    :param qualname: the fully qualified name of the object</span>
+<span class="sd">    :param obj: the actual object to retrieve the source code lines from</span>
+<span class="sd">    :param highlighter: the Pygments lexer to highlight the code block with</span>
+<span class="sd">    :return: the highlighted and fully formatted HTML codeblock to insert</span>
+<span class="sd">    """</span>
+    <span class="n">sourcelines</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="kp">getsourcelines</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+    <span class="n">initial_indent</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sourcelines</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">sourcelines</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="kp">lstrip</span><span class="p">())</span>
+
+    <span class="k">if</span> <span class="n">initial_indent</span><span class="p">:</span>  <span class="c1"># Remove common leading whitespace</span>
+        <span class="n">pattern</span> <span class="o">=</span> <span class="sa">fr</span><span class="s2">"[ ]</span><span class="se">{{</span><span class="si">{</span><span class="n">initial_indent</span><span class="si">}</span><span class="se">}}</span><span class="s2">(.*)"</span>
+        <span class="n">sourcelines</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">re</span><span class="o">.</span><span class="kp">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="sa">r</span><span class="s2">"\1"</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">sourcelines</span>
+        <span class="p">)</span>
+    <span class="c1"># Convert to HTML code block with syntax highlighting</span>
+    <span class="n">highlighted</span> <span class="o">=</span> <span class="n">highlighter</span><span class="o">.</span><span class="kp">highlight_block</span><span class="p">(</span>
+        <span class="n">source</span><span class="o">=</span><span class="s1">''</span><span class="o">.</span><span class="kp">join</span><span class="p">(</span><span class="n">sourcelines</span><span class="p">),</span>
+        <span class="n">lang</span><span class="o">=</span><span class="s1">'python'</span><span class="p">,</span>
+        <span class="n">linenos</span><span class="o">=</span><span class="kc">False</span>
+    <span class="p">)</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">highlighted</span><span class="o">.</span><span class="kp">splitlines</span><span class="p">()</span>
+    <span class="n">before</span><span class="p">,</span> <span class="n">after</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="kp">split</span><span class="p">(</span><span class="sa">r</span><span class="s2">"&lt;pre&gt;(?:&lt;span&gt;&lt;/span&gt;)?"</span><span class="p">,</span> <span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">before</span><span class="si">}</span><span class="s1">&lt;pre&gt;&lt;div class="viewcode-block" id="</span><span class="si">{</span><span class="n">qualname</span><span class="si">}</span><span class="s1">"&gt;</span><span class="si">{</span><span class="n">after</span><span class="si">}</span><span class="s1">'</span>
+
+    <span class="n">code_block</span> <span class="o">=</span> <span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="o">.</span><span class="kp">join</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kp">wrap_code_block</span><span class="p">(</span><span class="n">code_block</span><span class="p">)</span>
+</div></pre></div>
+</details>
+</dt>
+<dd><p>Parses and highlights the source code lines of the provided object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qualname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – the fully qualified name of the object</p></li>
+<li><p><strong>obj</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><em>Any</em></a>) – the actual object to retrieve the source code lines from</p></li>
+<li><p><strong>highlighter</strong> (<em>PythonLexer</em>) – the Pygments lexer to highlight the code block with</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the highlighted and fully formatted HTML codeblock to insert</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.html#bs4.BeautifulSoup" title="(in Beautiful Soup v4)"><em>BeautifulSoup</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="sphinx_inlinecode.wrap_code_block">
+<span class="sig-prename descclassname"><span class="pre">sphinx_inlinecode.</span></span><span class="sig-name descname"><span class="pre">wrap_code_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code_block</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/TDKorn/sphinx-inlinecode/blob/main/sphinx_inlinecode/__init__.py#L179-L193"><span class="linkcode-link"><span class="pre">View</span> <span class="pre">on</span> <span class="pre">GitHub</span></span></a><a class="headerlink" href="#sphinx_inlinecode.wrap_code_block" title="Permalink to this definition"></a>
+<details class="sphinx-inlinecode">
+<summary>
+<span class="pre">View Source Code</span>
+</summary>
+<div class="highlight"><pre><div class="viewcode-block" id="sphinx_inlinecode.wrap_code_block"><span class="k">def</span> <span class="nf">wrap_code_block</span><span class="p">(</span><span class="n">code_block</span><span class="p">:</span> <span class="bp">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nc">BeautifulSoup</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Wraps the given code block inside a ``&lt;details&gt;`` HTML element</span>
+
+<span class="sd">    :param code_block: HTML of the code block to wrap</span>
+<span class="sd">    :return: the wrapped code block</span>
+<span class="sd">    """</span>
+    <span class="n">html</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
+<span class="s2">    &lt;details class="sphinx-inlinecode"&gt;</span>
+<span class="s2">        &lt;summary&gt;</span>
+<span class="s2">            &lt;span class="pre"&gt;View Source Code&lt;/span&gt;</span>
+<span class="s2">        &lt;/summary&gt;</span>
+<span class="s2">        </span><span class="si">{</span><span class="n">code_block</span><span class="si">}</span>
+<span class="s2">    &lt;/details&gt;</span>
+<span class="s2">    """</span>
+    <span class="k">return</span> <span class="nc">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="s1">'html.parser'</span><span class="p">)</span>
+</div></pre></div>
+</details>
+</dt>
+<dd><p>Wraps the given code block inside a <code class="docutils literal notranslate"><span class="pre">&lt;details&gt;</span></code> HTML element</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>code_block</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – HTML of the code block to wrap</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the wrapped code block</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.html#bs4.BeautifulSoup" title="(in Beautiful Soup v4)"><em>BeautifulSoup</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+</section>
+</div>
+</div>
+<footer><div aria-label="Footer" class="rst-footer-buttons" role="navigation">
+<a accesskey="p" class="btn btn-neutral float-left" href="index.html" rel="prev" title="sphinx-inlinecode"><span aria-hidden="true" class="fa fa-arrow-circle-left"></span> Previous</a>
+</div>
+<hr/>
+<div role="contentinfo">
+<p>© Copyright 2023, Adam Korn.</p>
+</div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+</div>
+</div>
+</section>
+</div>
+<script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+</body>
+</html>
