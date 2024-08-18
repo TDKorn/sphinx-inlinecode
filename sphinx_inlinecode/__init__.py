@@ -2,7 +2,6 @@ import re
 import sys
 import sphinx
 import inspect
-import functools
 
 from pathlib import Path
 from typing import Dict, Any
@@ -14,7 +13,7 @@ from sphinx.application import Sphinx
 from pygments.lexers.python import PythonLexer
 
 
-__version__ = "2.0.0"
+__version__ = "2.0.1"
 __author__ = 'Adam Korn <hello@dailykitten.net>'
 
 
