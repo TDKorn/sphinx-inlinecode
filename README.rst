@@ -68,6 +68,7 @@ Add the extension to your ``conf.py``
    ]
 
 
+Make sure you disable the ``sphinx.ext.viewcode`` extension, as it will conflict with ``sphinx-inlinecode``
 
 Documentation
 ~~~~~~~~~~~~~~~
